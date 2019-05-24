@@ -1,21 +1,13 @@
-# Auth0 JavaScript Login
+# Auth0 - Bank Zero, Java Script Log-In
 
-This sample demonstrates how to add authentication to a JavaScript application with Auth0. The sample makes use of Auth0's hosted login page which provides centralized authentication.
+This sample demonstrates a PoC application for Bank Zero based on their requirements, using the Auth0 Java Script sample app. The sample makes use of Auth0's hosted login page which provides centralized authentication. The application demonstrates the following requirements:
 
-## Getting Started
+1. Ability to log in or sign up for an account, using the Auth0 Universal log-in page.
+2. The ability to log in with one of two social site settings: Google or LinkedIn.
+3. During authentication of the user, captures the role of the user, applying the appropriate permissions based on the role.
+	a. The role is being captured via a custom claim on the ID token, applied to a rule in the Auth0 Dashboard.
+4. Though not a specific requirement, the authentication process includes requesting the user's profile, demonstrating how Bank Zero can collect data on the user for their own purposes.
 
-If you haven't already done so, [sign up](https://auth0.com) for your free Auth0 account and create a new client in the [dashboard](https://manage.auth0.com). Find the **domain** and **client ID** from the settings area and add the URL for your application to the **Allowed Callback URLs** box. If you are serving the application with the provided `serve` library, that URL is `http://localhost:3000`.
-
-Clone the repo or download it from the JavaScript quickstart page in Auth0's documentation.
-
-```bash
-cd 01-Login
-npm install
-```
-
-## Set the Client ID and Domain
-
-If you download the sample from the quickstart page, it will come pre-populated with the **client ID** and **domain** for your application. If you clone the repo directly from Github, rename the `auth0-variables.js.example` file to `auth0-variables.js` and provide the **client ID** and **domain** there.
 
 ## Run the Application
 
@@ -27,26 +19,6 @@ npm start
 
 The application will be served at `http://localhost:3000`.
 
-## Run the Application With Docker
-
-In order to run the example with docker you need to have `docker` installed.
-
-You also need to set the environment variables as explained [previously](#set-the-client-id-and-domain).
-
-Execute in command line `sh exec.sh` to run the Docker in Linux, or `.\exec.ps1` to run the Docker in Windows.
-
-## Running the Tests
-
-**Pre-Conditions:**
-- Make sure you meet the requirements detailed in the [auth0-quickstarts-tester](https://www.npmjs.com/package/auth0-quickstarts-tester#requirements) package. Python, CasperJS, PhantomJS and Docker Desktop must be installed in your host.
-- Edit the `auth0-variables.js.example` file adding your own credentials. Rename the file to `auth0-variables.js`.
-- Edit the `test.js` file and set a valid pair of `user` and `password` credentials, used to log in into the app.
-
-Run the test:
-
-```bash
-npm test
-```
 
 ## What is Auth0?
 
@@ -59,10 +31,6 @@ Auth0 helps you to:
 * Analytics of how, when and where users are logging in.
 * Pull data from other sources and add it to the user profile, through [JavaScript rules](https://docs.auth0.com/rules).
 
-## Create a free Auth0 account
-
-1. Go to [Auth0](https://auth0.com/signup) and click Sign Up.
-2. Use Google, GitHub or Microsoft Account to login.
 
 ## Issue Reporting
 
@@ -75,6 +43,11 @@ If you have found a bug or if you have a feature request, please report them at 
 ## License
 
 This project is licensed under the MIT license. See the [LICENSE](LICENSE.txt) file for more info.
+
+
+
+
+
 
 
 
